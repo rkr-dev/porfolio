@@ -2,9 +2,8 @@ require("dotenv").config({
   path: `.env`,
 })
 
-
 module.exports = {
-  flags:{DEV_SSR:true},
+  flags:{DEV_SSR:true,FAST_DEV:true},
   siteMetadata: {
     title: `Rinil Kunhiraman | Web Developer`,
     description: `Website portfolio of Rinil Kunhiraman`,
@@ -27,7 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-172851032-1",
+        trackingId: process.env.GOOGLE_TRACKING_ID,
         head: false,
         anonymize: true,
         respectDNT: true,
@@ -65,7 +64,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://evening-cove-34160.herokuapp.com`,
+        apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: ["jobs", "projects", "blogs", "services","products"],
         singleTypes: [`about`],
