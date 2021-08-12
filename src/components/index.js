@@ -12,3 +12,5 @@ export { SEO  } from './SEO/SEO';
 export { Sidebar  } from './Sidebar/Sidebar';
 export { Socials  } from './Socials/Socials';
 export { Title  } from './Title/Title';
+export { Particlesbg } from './Particles/Particlesbg';
+export { Quotes } from './Quotes/Quotes';

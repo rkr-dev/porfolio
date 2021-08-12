@@ -1,0 +1,80 @@
+.Hero {
+  margin-top: -5rem;
+  padding-top: 5rem;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+}
+
+.SectionCenter {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.HeroCenter {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  z-index: 2;
+}
+
+.Hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+.HeroInfo {
+  /* background: hsl(186, 100%, 94%); */
+  background: transparent;
+}
+.HeroImg {
+  display: none;
+}
+
+.HeroInfo h4 {
+  color: hsl(210, 22%, 49%);
+}
+.HeroIcons {
+  justify-items: flex-start;
+}
+.Hero .btn {
+  margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 992px) {
+  .HeroCenter {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .Hero h4 {
+    font-size: 0.85rem;
+  }
+  .HeroInfo {
+    grid-row: 1/1;
+    grid-column: 1 / span 8;
+  }
+  .HeroImg {
+    display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .Hero h4 {
+    font-size: 1rem;
+  }
+
+  .HeroInfo {
+    grid-column: 1 / span 8;
+  }
+
+  .Hero h4 {
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .HeroInfo h1 span {
+    color: #e74c3c;
+  }
+}
