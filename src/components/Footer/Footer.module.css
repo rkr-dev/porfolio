@@ -1,0 +1,20 @@
+.Footer {
+  height: 9rem;
+  width: 100%;
+  background: rgba(0, 0, 0.9);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.Footer h4 {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-weight: normal;
+}
+.Footer h4 span {
+  color: #e74c3c;
+  margin: 0 0.5rem;
+}

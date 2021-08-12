@@ -1,0 +1,74 @@
+.NavLinks {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .NavLinks {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .NavLinks li {
+    margin-right: 2rem;
+  }
+  .NavLinks a {
+    text-transform: capitalize;
+    color: hsl(209, 61%, 16%);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s linear;
+    padding: 0.5rem 0;
+  }
+  .NavLinks a:hover {
+    color: #e74c3c;
+    box-shadow: 0px 2px #e74c3c;
+  }
+}
+
+
+.SidebarLinks li {
+  opacity: 0;
+}
+.SidebarLinks li a {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: #e87c03;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+.SidebarLinks li a:hover {
+  background: #f6cb9a;
+  color: #e74c3c;
+}
+
+.SidebarLinks li {
+  animation: slideRight 0.5s ease-in-out 0.3s forwards;
+}
+.SidebarLinks li:nth-of-type(1) {
+  animation-delay: 0.25s;
+}
+.SidebarLinks li:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.SidebarLinks li:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+.SidebarLinks li:nth-of-type(4) {
+  animation-delay: 1s;
+}
+.SidebarLinks li:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
