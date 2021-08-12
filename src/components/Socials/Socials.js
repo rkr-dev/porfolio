@@ -13,7 +13,7 @@ const links = socials.map(({ id, icon, url, name }) => {
   );
 });
 
-export default ({ styleClass }) => {
+export const Socials = ({ styleClass }) => {
   const { FooterLinks, SidebarIcons } = styles;
 
   return (

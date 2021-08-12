@@ -3,10 +3,10 @@ import cx from 'classnames';
 import { Link } from 'gatsby';
 import logo from '../../assets/logo.svg';
 import { FaAlignRight } from 'react-icons/fa';
-import PageLinks from '../Links/Links';
+import {Links} from '../../components';
 import * as styles from './Navbar.module.css';
 
-const Navbar = ({ toggleSidebar }) => {
+export const Navbar = ({ toggleSidebar }) => {
   const [show, setShow] = useState(false);
   return (
     <nav className={cx(styles.Navbar, show && styles.NavbarWhite)}>
@@ -30,10 +30,8 @@ const Navbar = ({ toggleSidebar }) => {
             <FaAlignRight></FaAlignRight>
           </button>
         </div>
-        <PageLinks styleClass="navLinks"></PageLinks>
+        <Links styleClass="navLinks"></Links>
       </div>
     </nav>
   );
 };
-
-export default Navbar;

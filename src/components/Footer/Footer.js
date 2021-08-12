@@ -1,12 +1,12 @@
 import React from 'react';
 import * as styles from './Footer.module.css';
-import  SocialLinks  from '../Socials/Socials';
+import  {Socials}  from '../../components';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <div>
-        <SocialLinks styleClass="footerLinks"></SocialLinks>
+        <Socials styleClass="footerLinks"></Socials>
         <h4>
           Copyright &copy; {new Date().getFullYear()}
           <span>RK</span> All rights reserved
@@ -15,5 +15,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

@@ -12,7 +12,7 @@ const tempLinks = links.map(({ id, text, url }) => (
 ))
 
 
-export default ({ styleClass }) => {
+export const  Links  = ({ styleClass }) => {
     const { NavLinks, SidebarLinks } = styles;
     return (
         <ul className={cx(styleClass === 'navLinks' ? NavLinks : SidebarLinks)}>

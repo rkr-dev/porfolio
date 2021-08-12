@@ -1,13 +1,19 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout';
+import { graphql } from 'gatsby';
+import { Layout, SEO, Hero, Projects, Jobs, Blogs } from '../components';
 
 const IndexPage = () => {
+  let blogs = [];
+  let projects = [];
   return (
     <Layout>
-      <h1>This is the home page and the site will come live soon</h1>
+      <SEO title="Home" />
+      <Hero />
+      <Projects projects={projects} title="featured projects" showLink />
+      <Jobs />
+      <Blogs blogs={blogs} title="latest Articles" showLink />
     </Layout>
   );
 };
-
 
 export default IndexPage;
