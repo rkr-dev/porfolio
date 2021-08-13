@@ -1,16 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { getSrc, getImage } from 'gatsby-plugin-image';
 import { Layout, About, SEO } from '../components';
 
-const AboutPage = ({
-  data:{about:{nodes}}
-}) => {
-const { title, info, image, stack } = nodes[0];
-image.src = image.url;
+const AboutPage = ({ data: { about } }) => {
+  const { title, info, image, stack } = about.edges[0].node;
+  const imagePath = getSrc(image.localFile);
+  const imageData = getImage(image.localFile);
   return (
     <Layout>
-       <SEO title="About" image={ image}/>
-            <About title={title} info={info} stack={stack} image={ image}/> 
+      <SEO title="About" image={imagePath} />
+      <About title={title} info={info} stack={stack} image={imageData} />
     </Layout>
   );
 };
@@ -18,20 +18,26 @@ image.src = image.url;
 export default AboutPage;
 
 export const query = graphql`
-{
-  about:allStrapiAbout {
-    nodes {
-      title
-      info
-      stack {
-        id
-        title
-      }
-      image{
-        name
-        url
+  {
+    about: allStrapiAbout {
+      edges {
+        node {
+          stack {
+            title
+            id
+          }
+          id
+          title
+          info
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
       }
     }
   }
-}
 `;

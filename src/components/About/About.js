@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Image from 'gatsby-plugin-image';
+import {GatsbyImage} from 'gatsby-plugin-image';
 import cx from 'classnames';
 import { Title } from '../../components';
 import * as styles from './About.module.css';
@@ -10,7 +10,7 @@ export const About = ({ title, info, stack, image }) => {
     <section className={styles.AboutPage}>
       <div className={cx(styles.SectionCenter, styles.AboutCenter)}>
         <div className={styles.AboutImg}>
-          <img src={image.src} alt={image.name} />
+          <GatsbyImage image={image} alt="{image.name}" />
         </div>
         <article className={styles.AboutText}>
           <Title title={title} styleClass="about" />

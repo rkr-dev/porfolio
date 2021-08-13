@@ -66,7 +66,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
-        contentTypes: ["jobs", "projects", "blogs", "services","products"],
+        collectionTypes: ["jobs", "projects", "blogs", "services","products"],
         singleTypes: [`about`],
       },
     },

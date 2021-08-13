@@ -15,12 +15,6 @@
   height: 25rem;
 }
 
-.AboutImg img{
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
 
 @media screen and (min-width: 992px) {
   .SectionCenter {
