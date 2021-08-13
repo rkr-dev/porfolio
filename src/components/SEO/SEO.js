@@ -25,7 +25,7 @@ export const SEO =({ description, lang, image, meta, keywords, title, pathname }
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage =
-    image && image.src ? `${site.siteMetadata.siteUrl}${image.src}` : null
+    image && image.src  ? `${site.siteMetadata.siteUrl}${image.src}` : null
   const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`
 
   return (

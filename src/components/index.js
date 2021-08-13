@@ -1,4 +1,5 @@
-export { Blogs  } from './Blogs/Blogs';
+export { About } from './About/About';
+export { Blogs } from './Blogs/Blogs';
 export  {Blog  } from './Blog/Blog';
 export { Footer  } from './Footer/Footer';
 export { Hero  } from './Hero/Hero';
