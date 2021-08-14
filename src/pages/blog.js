@@ -1,13 +1,42 @@
 import React from 'react';
-import {Layout} from '../components'
+import { graphql } from 'gatsby';
+import { Blogs, Layout, SEO } from '../components';
 
+const BlogPage = ({ data }) => {
+  const blogs = data.blogs.edges;
 
-const BlogPage = () => {
-    return (
-        <Layout>
-            <h1>Blog Page</h1>
-        </Layout>
-    )
-}
+  return (
+    <Layout>
+      <SEO title="Blog" />
+      <section className="blogPage">
+        <Blogs blogs={blogs} title="Blog" />
+      </section>
+    </Layout>
+  );
+};
 
 export default BlogPage;
+
+export const query = graphql`
+  {
+    blogs: allStrapiBlogs {
+      edges {
+        node {
+          category
+          id
+          desc
+          slug
+          title
+          date(formatString: "MMM Do YYYY")
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
