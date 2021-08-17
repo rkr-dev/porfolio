@@ -1,11 +1,12 @@
 import React from 'react';
-import {Layout} from '../components'
+import {Layout,SEO,Contact} from '../components'
 
 
 const ContactPage = () => {
     return (
         <Layout>
-            <h1>Contact Page</h1>
+            <SEO title="About"/>
+            <Contact />
         </Layout>
     )
 }

@@ -11,7 +11,7 @@ export const Title = ({ title, styleClass }) => {
       <h2>{title || "title"}</h2>
       <div
         className={
-          styleClass === "about" ? styles.AboutUnderline : styles.underline
+          styleClass === "about" ? styles.AboutUnderline : 'underline'
         }
       ></div>
     </div>

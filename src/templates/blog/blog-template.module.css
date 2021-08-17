@@ -1,0 +1,42 @@
+.blogTemplate {
+  padding: 5rem 0;
+  background: hsl(210, 36%, 96%);
+  min-height: calc(100vh - 5rem - 9rem);
+}
+
+.blogTemplate h1,
+.blogTemplate h2 {
+  text-align: center;
+}
+.blogTemplate ul {
+  margin-top: 2rem;
+  display: inline-block;
+}
+.blogTemplate ul li {
+  background: hsl(212, 33%, 89%);
+  color: hsl(210, 22%, 49%);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.blogTemplate blockquote {
+  background: hsl(185, 94%, 87%);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  line-height: 2;
+  color: #2caeba;
+  margin: 2rem 0;
+}
+.blogTemplate pre {
+  background: #222;
+  color: yellow;
+  overflow-x: scroll;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+}
+.blogTemplate img {
+  width: 15rem;
+  height: 15rem;
+  margin: 3rem 0;
+}

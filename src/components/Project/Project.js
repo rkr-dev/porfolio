@@ -16,7 +16,6 @@ export const Project = ({
 
   return (
     <Link to={`/projects/${id}`} key={id}>
-     {console.log('imageData: ', image)}
       <article className={styles.Project}>
         {image && (
           <GatsbyImage

@@ -8,7 +8,7 @@ import * as styles from './About.module.css';
 export const About = ({ title, info, stack, image }) => {
   return (
     <section className={styles.AboutPage}>
-      <div className={cx(styles.SectionCenter, styles.AboutCenter)}>
+      <div className={cx('SectionCenter', styles.AboutCenter)}>
         <div className={styles.AboutImg}>
           <GatsbyImage image={image} alt="{image.name}" />
         </div>
@@ -22,7 +22,7 @@ export const About = ({ title, info, stack, image }) => {
           </div>
         </article>
       </div>
-      <Link to="/projects" className={cx('btn', styles.CenterBtn)}>
+      <Link to="/projects" className={cx('btn', 'CenterBtn')}>
         Projects
       </Link>
     </section>

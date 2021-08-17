@@ -6,12 +6,6 @@
   z-index: 100;
 }
 
-.SectionCenter {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
 .HeroCenter {
   height: 100%;
   display: grid;

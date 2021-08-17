@@ -14,7 +14,7 @@ export const Projects = ({ projects, title, showLink }) => {
         ))}
       </div>
       {showLink && (
-        <Link to="/projects" className={cx(styles.btn, styles.centerBtn)}>
+        <Link to="/projects" className={cx('btn', 'centerBtn')}>
           projects
         </Link>
       )}

@@ -13,7 +13,7 @@ export const Hero = () => {
         background: `url('./assets/hero-img.png') no-repeat center center/cover`,
         backgroundAttachment: `fixed`,
       }}>
-      <div className={cx(styles.SectionCenter, styles.HeroCenter)}>
+      <div className={cx('sectionCenter', styles.HeroCenter)}>
         <article className={styles.HeroInfo}>
           <div>
             <div className="underline"></div>
