@@ -10,7 +10,7 @@ export { Links } from './Links/Links';
 export { Navbar } from './Navbar/Navbar';
 export { Project } from './Project/Project';
 export { Projects } from './Projects/Projects';
-export { SEO } from './SEO/SEO';
+export { Seo } from './Seo/Seo';
 export { Sidebar } from './Sidebar/Sidebar';
 export { Socials } from './Socials/Socials';
 export { Title } from './Title/Title';

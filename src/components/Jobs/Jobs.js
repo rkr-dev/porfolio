@@ -13,7 +13,7 @@ export const Jobs = () => {
 
 
   return (
-    <section className={cx('section', styles.jobs)}>
+    <section className={cx('section')}>
       <Title title="experience" />
       <div className={styles.jobsCenter}>
         <div className={styles.btnContainer}>

@@ -1,26 +1,26 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import ReactMarkdown from 'react-markdown';
 import cx from 'classnames';
-import { Layout, SEO } from '../../components';
+import { Layout, Seo } from '../../components';
 import * as styles from './blog-template.module.css';
 
 const BlogTemplate = ({ data }) => {
   const { title, content, desc, image } = data.blog;
   return (
     <Layout>
-      <SEO title={title} image={image.url} desc={desc} />
-      <section className={styles.blogTemplate}>
+      <Seo title={title} image={image.url} desc={desc} />
+      <section className={styles.BlogTemplate}>
         <GatsbyImage
           image={image.localFile.childImageSharp.gatsbyImageData}
-          className={styles.blogImage}
+          className={styles.BlogImg}
         />
         <div className={cx('sectionCenter')}>
-          <article className={styles.blogContent}>
+          <article className={styles.BlogContent}>
             <ReactMarkdown children={content} />
           </article>
-          <Link to="/blog" className={cx(styles.blogContent, 'centerBtn')}>
+          <Link to="/blog" className={cx('btn', 'centerBtn')}>
             blog
           </Link>
         </div>

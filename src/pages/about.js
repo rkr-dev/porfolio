@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { getSrc, getImage } from 'gatsby-plugin-image';
-import { Layout, About, SEO } from '../components';
+import { Layout, About, Seo } from '../components';
 
 const AboutPage = ({ data: { about } }) => {
   const { title, info, image, stack } = about.edges[0].node;
@@ -9,7 +9,7 @@ const AboutPage = ({ data: { about } }) => {
   const imageData = getImage(image.localFile);
   return (
     <Layout>
-      <SEO title="About" image={imagePath} />
+      <Seo title="About" image={imagePath} />
       <About title={title} info={info} stack={stack} image={imageData} />
     </Layout>
   );

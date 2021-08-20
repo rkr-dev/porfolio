@@ -14,6 +14,12 @@
     transform: translateX(-100%);
   }
   
+  .SideContainer{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
   @media screen and (min-width: 992px) {
     .Sidebar {
       transform: translateX(-100%);

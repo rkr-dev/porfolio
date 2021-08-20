@@ -1,13 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, SEO, Hero, Projects, Jobs, Blogs } from '../components';
+import { Layout, Seo, Hero, Projects, Jobs, Blogs } from '../components';
 
 const IndexPage = ({ data }) => {
   let blogs = data.blogs.edges;
   let projects = data.projects.edges;
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Hero />
       <Projects projects={projects} title="featured projects" showLink />
       <Jobs />
@@ -39,7 +39,7 @@ export const query = graphql`
         }
       }
     }
-    projects: allStrapiProjects(filter: {featured: {eq: true}} ) {
+    projects: allStrapiProjects(limit: 3,filter: {featured: {eq: true}} ) {
       edges {
         node {
           github

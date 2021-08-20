@@ -1,13 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, SEO, Projects } from '../components';
-import { getImage } from 'gatsby-plugin-image';
+import { Layout, Seo, Projects } from '../components';
 
 const ProjectsPage = ({ data }) => {
   let projects = data.projects.edges;
   return (
     <Layout>
-      <SEO title="Projects" />
+      <Seo title="Projects" />
       <Projects projects={projects} title="all projects" />
     </Layout>
   );

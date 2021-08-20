@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { GatsbyImage,getImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import * as styles from './Project.module.css';
 
 export const Project = ({
@@ -26,9 +27,19 @@ export const Project = ({
         )}
         <div className={styles.ProjectCard}>
           <h4>{title}</h4>
-          <p>{description}</p>
+          <p>{description.length > 100 ? `${description.substr(0, 100)} ...` : description}</p>
+          <div className={styles.ProjectStack}>
+            {stack.map((item) => (
+              <span key={item.id}>{item.title}</span>
+            ))}
+          </div>
           <div className={styles.ProjectFooter}>
-            <p>{github}</p>
+          <a href={github}>
+            <FaGithubSquare className={styles.ProjectIcon}></FaGithubSquare>
+          </a>
+          <a href={url}>
+            <FaShareSquare className={styles.ProjectIcon}></FaShareSquare>
+          </a>
           </div>
         </div>
       </article>

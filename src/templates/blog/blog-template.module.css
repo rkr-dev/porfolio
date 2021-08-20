@@ -1,18 +1,31 @@
-.blogTemplate {
-  padding: 5rem 0;
+.BlogTemplate {
+  padding:0 0 5rem 0;
   background: hsl(210, 36%, 96%);
   min-height: calc(100vh - 5rem - 9rem);
 }
 
-.blogTemplate h1,
-.blogTemplate h2 {
+.BlogTemplate h1,
+.BlogTemplate h2 {
   text-align: center;
 }
-.blogTemplate ul {
+.BlogTemplate ul {
   margin-top: 2rem;
   display: inline-block;
 }
-.blogTemplate ul li {
+.BlogTemplate h1{
+  margin-bottom: 25px;
+}
+
+.BlogTemplate h2{
+  margin-bottom: 20px;
+}
+.BlogTemplate h3,h4{
+  margin-bottom: 15px;
+}
+
+
+
+.BlogTemplate ul li {
   background: hsl(212, 33%, 89%);
   color: hsl(210, 22%, 49%);
   padding: 0.5rem 1rem;
@@ -20,7 +33,7 @@
   text-transform: uppercase;
 }
 
-.blogTemplate blockquote {
+.BlogTemplate blockquote {
   background: hsl(185, 94%, 87%);
   border-radius: 0.25rem;
   padding: 1rem;
@@ -28,15 +41,31 @@
   color: #2caeba;
   margin: 2rem 0;
 }
-.blogTemplate pre {
+.BlogTemplate pre {
   background: #222;
   color: yellow;
   overflow-x: scroll;
   padding: 1rem 1.5rem;
   border-radius: 0.25rem;
 }
-.blogTemplate img {
-  width: 15rem;
+
+.BlogImg{
   height: 15rem;
-  margin: 3rem 0;
+  width: 100%;
+}
+
+.BlogContent{
+  padding-top: 10rem;
+}
+
+.BlogContent img{
+  max-width: 550px;
+  border-radius: 0.25rem;
+
+}
+
+@media screen and (max-width:550px) {
+  .BlogContent img{
+    max-width: 100%;
+  }
 }

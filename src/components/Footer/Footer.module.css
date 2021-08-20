@@ -5,9 +5,9 @@
   text-align: center;
   display: grid;
   place-items: center;
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 }
 .Footer h4 {
   margin-top: 0.5rem;

@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './Title.module.css';
 
 export const Title = ({ title, styleClass }) => {
+
   return (
     <div
       className={

@@ -1,13 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Blogs, Layout, SEO } from '../components';
+import { Blogs, Layout, Seo } from '../components';
 
 const BlogPage = ({ data }) => {
   const blogs = data.blogs.edges;
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <section className="blogPage">
         <Blogs blogs={blogs} title="Blog" />
       </section>

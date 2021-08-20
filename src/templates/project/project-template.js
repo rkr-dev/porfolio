@@ -1,39 +1,44 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image';
-import ReactMarkdown from 'react-markdown';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import cx from 'classnames';
-import { Layout, SEO } from '../../components';
+import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
+import { Layout, Seo } from '../../components';
 import * as styles from './project-template.module.css';
 
 const ProjectTemplate = ({ data }) => {
-  const {
-    github,
-    featured,
-    description,
-    id,
-    title,
-    updatedAt,
-    url,
-    visible,
-    stack,
-    image,
-  } = data.project;
- 
+  const { github, description, title, url, stack, image } = data.project;
+
   return (
     <Layout>
-      <SEO title={title} image={image.url} />
-      <section className={styles.blogTemplate}>
-        <GatsbyImage
-          image={image.localFile.childImageSharp.gatsbyImageData}
-          className={styles.blogImage}
-        />
+      <Seo title={title} image={image.url} />
+      <section className={styles.ProjectTemplate}>
         <div className={cx('sectionCenter')}>
-          <article className={styles.blogContent}>
-            <ReactMarkdown children={description} />
-          </article>
+          <div className={styles.ImgContainer}>
+          <GatsbyImage
+            image={image.localFile.childImageSharp.gatsbyImageData}
+            className={styles.ProjectImg}
+          />
+          </div>
+          <div className={styles.ProjectDetails}>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <div className={styles.ProjectStack}>
+              {stack.map((item) => (
+                <span key={item.id}>{item.title}</span>
+              ))}
+            </div>
+            <div className={styles.ProjectLinks}>
+              <a href={github}>
+                <FaGithubSquare className={styles.ProjectIcon}></FaGithubSquare>
+              </a>
+              <a href={url}>
+                <FaShareSquare className={styles.ProjectIcon}></FaShareSquare>
+              </a>
+            </div>
+          </div>
           <Link to="/projects" className={cx('btn', 'centerBtn')}>
-            blog
+            projects
           </Link>
         </div>
       </section>

@@ -2,7 +2,10 @@ import React from 'react';
 import Particles from 'react-tsparticles';
 import * as styles from './Particlesbg.module.css';
 
+
+
 export const Particlesbg = () => {
+
   return (
     <Particles
       id="tsparticles"
@@ -12,7 +15,7 @@ export const Particlesbg = () => {
           color: {
             value: 'transparent',
           },
-          image: 'url("/assets/hero-img.png")',
+          image: `url('')`,
           position: '50% 50%',
           repeat: 'no-repeat',
           size: 'contain',
@@ -96,3 +99,4 @@ export const Particlesbg = () => {
       }}></Particles>
   );
 };
+

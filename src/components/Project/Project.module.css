@@ -31,6 +31,34 @@
     color:hsl(209, 61%, 16%);
     min-height: 2rem;
   }
+
+  .ProjectStack span {
+    display: inline-block;
+    background: hsl(212, 33%, 89%);
+    color: hsl(210, 22%, 49%);
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+  .ProjectStack span {
+    margin-top: 0.5rem;
+  }
+  
+  .ProjectIcon{
+    color: #2caeba;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s linear;;
+  }
+
+  .ProjectIcon:hover{
+    color: hsl(184, 91%, 17%);
+  }
+
+
   
   .ProjectFooter {
     display: flex;

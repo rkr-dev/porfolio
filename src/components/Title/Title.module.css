@@ -2,13 +2,19 @@
     margin-bottom: 4rem;
     text-align: center;
   }
-  
+
+.SectionTitle h2{
+  text-transform: capitalize;
+  }
   
   .AboutSectionTitle {
     margin-bottom: 2rem;
     text-align: left;
   }
-  
+  .AboutSectionTitle h2 {
+    text-transform: capitalize;
+  }
+
   .AboutUnderline {
     width: 5rem;
     height: 0.25rem;
