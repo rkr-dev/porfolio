@@ -9,8 +9,8 @@ export const About = ({ title, info, stack, image }) => {
   return (
     <section className={styles.AboutPage}>
       <div className={cx('SectionCenter', styles.AboutCenter)}>
-        <div className={styles.AboutImg}>
-          <GatsbyImage image={image} alt="{image.name}" />
+        <div className={styles.AboutImgContainer}>
+        <GatsbyImage image={image} alt="{image.name}" className={styles.AboutImg} imgClassName={ styles.ImgClass}/>
         </div>
         <article className={styles.AboutText}>
           <Title title={title} styleClass="about" />
@@ -22,7 +22,7 @@ export const About = ({ title, info, stack, image }) => {
           </div>
         </article>
       </div>
-      <Link to="/projects" className={cx('btn', 'CenterBtn')}>
+      <Link to="/projects" className={cx('btn', 'centerBtn')}>
         Projects
       </Link>
     </section>

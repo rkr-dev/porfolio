@@ -1,29 +1,37 @@
 .AboutPage {
   padding: 7rem 0;
   background: hsl(210, 36%, 96%);
-  min-height: calc(100vh - 5rem - 9rem);
+}
+
+.AboutImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .AboutImg {
-  margin-bottom: 2rem;
-  height: 25rem;
+  height: 250px;
+  width: 250px;
 }
 
+.ImgClass {
+  border-radius: 50%;
+  margin: 0 auto;
+}
 
-@media screen and (min-width: 992px) {
-  .AboutCenter {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    column-gap: 4rem;
-  }
-  .AboutImg {
-    grid-column: 1 / span 5;
-    margin-bottom: 0;
-  }
-  .AboutText {
-    grid-column: 6 / -1;
-  }
+.AboutText {
+  padding: 0 2rem;
+}
+
+.AboutText .sectionTitle {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.about-text .underline {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .AboutText p {
@@ -43,4 +51,24 @@
 }
 .AboutStack span {
   margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .AboutCenter {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .AboutImgContainer {
+    grid-column: 1 / span 5;
+    margin-bottom: 0;
+  }
+  .AboutImg {
+    height: 350px;
+    width: 350px;
+  }
+  .AboutText {
+    grid-column: 6 / -1;
+  }
 }
