@@ -12,6 +12,7 @@ export const Blog = ({ id, title, image, date, category, slug, desc }) => {
           <GatsbyImage
             image={image.localFile.childImageSharp.gatsbyImageData}
             className={styles.blogImg}
+            alt={title}
           />
         )}
         <div className={styles.blogCard}>

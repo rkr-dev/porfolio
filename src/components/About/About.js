@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import {GatsbyImage} from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import cx from 'classnames';
 import { Title } from '../../components';
 import * as styles from './About.module.css';

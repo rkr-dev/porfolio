@@ -15,6 +15,7 @@ const BlogTemplate = ({ data }) => {
         <GatsbyImage
           image={image.localFile.childImageSharp.gatsbyImageData}
           className={styles.BlogImg}
+          alt={title}
         />
         <div className={cx('sectionCenter')}>
           <article className={styles.BlogContent}>

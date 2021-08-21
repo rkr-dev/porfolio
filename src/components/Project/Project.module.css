@@ -1,94 +1,107 @@
 .Project {
-    display: block;
-    margin-bottom: 2rem;
-    background: hsl(210, 36%, 96%);
-    border-radius: 0.25rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s linear;
-  }
-  .Project:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-  }
-  .Project article {
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr;
-  }
-  .ProjectCard {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
+  display: block;
+  margin-bottom: 2rem;
+  background: hsl(210, 36%, 96%);
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 15px 0px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s linear;
+}
+.Project:hover {
+  box-shadow: 0px 0px 15px 5px rgba(231, 76, 60, 0.5);
+  transform: scale(1.02);
+}
+.Project article {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.ProjectCard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.ProjectLink {
+  display: block;
+  width: 100%;
+  height: 5rem;
+}
+
+.ProjectImg {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.ProjectCard {
+  padding: 1.5rem 1rem;
+}
+.ProjectCard h4 {
+  color: hsl(209, 61%, 16%);
+  min-height: 2rem;
+}
+
+.ProjectCard p {
+  height: 55px;
+}
+
+.ProjectStack {
+  height: 75px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  padding: 0 5px;
+}
+
+.ProjectStack span {
+  display: inline-block;
+  background: hsl(212, 33%, 89%);
+  color: hsl(210, 22%, 49%);
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.ProjectIcon {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s linear;
+}
+
+.ProjectIcon:hover {
+ color: #e74c3c;
+}
+
+.ProjectFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.ProjectFooter a {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.3);
+}
+.ProjectFooter a svg{
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
   .ProjectImg {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    height: 15rem;
+    height: 17.5rem;
   }
-  .ProjectCard {
-    padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 850px) {
+  .ProjectImg {
+    height: 13.75rem;
   }
-  .ProjectCard h4 {
-    color:hsl(209, 61%, 16%);
-    min-height: 2rem;
-  }
-
-  .ProjectStack span {
-    display: inline-block;
-    background: hsl(212, 33%, 89%);
-    color: hsl(210, 22%, 49%);
-    margin-right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-  }
-  .ProjectStack span {
-    margin-top: 0.5rem;
-  }
-  
-  .ProjectIcon{
-    color: #2caeba;
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
-    transition: all 0.3s linear;;
-  }
-
-  .ProjectIcon:hover{
-    color: hsl(184, 91%, 17%);
-  }
-
-
-  
-  .ProjectFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .ProjectFooter p {
-    margin-bottom: 0;
-    font-weight: bold;
-    color: hsl(210, 22%, 49%);
-  }
-  .ProjectFooter p:first-of-type {
-    display: inline-block;
-    background: hsl(212, 33%, 89%);
-    color: hsl(210, 22%, 49%);
-    margin-right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-  }
-  @media screen and (min-width: 576px) {
-    .ProjectImg {
-      height: 17.5rem;
-    }
-  }
-  @media screen and (min-width: 850px) {
-    .ProjectImg {
-      height: 13.75rem;
-    }
-  }
-  
+}

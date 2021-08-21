@@ -17,6 +17,7 @@ const ProjectTemplate = ({ data }) => {
           <GatsbyImage
             image={image.localFile.childImageSharp.gatsbyImageData}
             imgClassName={styles.ProjectImg}
+            alt={title}
           />
           <div className={styles.ProjectDetails}>
             <h3>{title}</h3>
@@ -27,10 +28,10 @@ const ProjectTemplate = ({ data }) => {
               ))}
             </div>
             <div className={styles.ProjectLinks}>
-              <a href={github}>
+              <a href={github} rel="noopener noreferrer" target="_blank">
                 <FaGithubSquare className={styles.ProjectIcon}></FaGithubSquare>
               </a>
-              <a href={url}>
+              <a href={url} rel="noopener noreferrer" target="_blank">
                 <FaShareSquare className={styles.ProjectIcon}></FaShareSquare>
               </a>
             </div>

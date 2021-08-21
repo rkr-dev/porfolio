@@ -6,7 +6,7 @@ import * as styles from './Socials.module.css';
 const links = socials.map(({ id, icon, url, name }) => {
   return (
     <li key={id}>
-      <a href={url} className={cx(styles.SocialLink,name)}>
+      <a href={url} className={cx(styles.SocialLink,name)} rel="noopener noreferrer" target="_blank">
         {icon}
       </a>
     </li>
