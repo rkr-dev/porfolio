@@ -33,10 +33,11 @@
     box-shadow: 0 2px #FFE5DB;
   }
   .jobInfo {
-    min-height: 420px;
+    max-height: 420px;
   }
   .jobInfo h3 {
     font-weight: 400;
+    margin-bottom: 10px;
   }
   .jobInfo h4 {
     text-transform: uppercase;
@@ -66,8 +67,10 @@
   @media screen and (min-width: 992px) {
     .jobsCenter {
       width: 90vw;
+      margin-top: 2rem;
       display: grid;
       grid-template-columns: 200px 1fr;
+      grid-template-rows: 350px;
       column-gap: 4rem;
     }
     .btnContainer {

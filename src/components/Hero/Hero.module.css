@@ -27,6 +27,7 @@
 }
 
 .HeroInfo h4 {
+  margin-top: 10px;
   color: hsl(210, 22%, 49%);
 }
 .HeroIcons {

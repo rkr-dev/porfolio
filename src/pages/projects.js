@@ -16,7 +16,7 @@ export default ProjectsPage;
 
 export const query = graphql`
   {
-    projects: allStrapiProjects {
+    projects: allStrapiProjects(sort: {fields: updatedAt, order: DESC}) {
       edges {
         node {
           github
