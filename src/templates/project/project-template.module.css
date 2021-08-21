@@ -1,13 +1,13 @@
 .ProjectTemplate {
   padding:0 0 5rem 0;
   min-height: calc(100vh - 5rem - 9rem);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(231, 76, 60, 0.4);
   transition: all 0.3s linear;
   margin:5rem 0;
   border-radius: 0.25rem;
 }
 .ProjectTemplate:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px 5px rgba(231, 76, 60, 0.6);
   transform: scale(1.02);
 }
 
@@ -15,12 +15,11 @@
   max-width: 100%;
 }
 
-.ImageContainer{
+.ImgContainer{
   width: 100%;
 }
 
 .ProjectImg{
-  height: 720px;
   width: 100%;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;

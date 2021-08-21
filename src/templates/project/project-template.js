@@ -14,12 +14,10 @@ const ProjectTemplate = ({ data }) => {
       <Seo title={title} image={image.url} />
       <section className={styles.ProjectTemplate}>
         <div className={cx('sectionCenter')}>
-          <div className={styles.ImgContainer}>
           <GatsbyImage
             image={image.localFile.childImageSharp.gatsbyImageData}
-            className={styles.ProjectImg}
+            imgClassName={styles.ProjectImg}
           />
-          </div>
           <div className={styles.ProjectDetails}>
             <h3>{title}</h3>
             <p>{description}</p>
