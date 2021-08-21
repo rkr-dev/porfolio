@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import * as styles from './Project.module.css';

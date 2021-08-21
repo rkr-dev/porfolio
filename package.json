@@ -40,7 +40,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.3",
-    "react-tsparticles": "^1.33.3"
+    "react-tsparticles": "^1.33.3",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "prettier": "2.0.5"
