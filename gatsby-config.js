@@ -8,7 +8,7 @@ module.exports = {
     title: `Rinil Kunhiraman | Web Developer`,
     description: `Website portfolio of Rinil Kunhiraman`,
     author: `Rinil Kunhiraman`,
-    image: ``,
+    image: `${__dirname}/src/assets/hero-img.png`,
     keywords:['portfolio','javascript','gatsby'],
     siteUrl: "https://www.rinilkunhiraman.dev",
     social:{
