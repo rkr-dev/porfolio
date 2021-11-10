@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
-import cx from 'classnames';
-import { Link } from 'gatsby';
-import logo from '../../assets/logo.svg';
-import { FaAlignRight } from 'react-icons/fa';
-import {Links} from '../../components';
-import * as styles from './Navbar.module.css';
+import React from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import logo from '../../assets/logo.svg'
+import { FaAlignRight } from 'react-icons/fa'
+import { Links } from '../../components'
+import * as styles from './Navbar.module.css'
 
 export const Navbar = ({ toggleSidebar }) => {
-  const [show, setShow] = useState(false);
   return (
-    <nav className={cx(styles.Navbar, show && styles.NavbarWhite)}>
+    <nav className={cx(styles.Navbar)}>
       <div className={styles.NavCenter}>
         <div className={styles.NavHeader}>
-          <Link to="/">
+          <Link to='/'>
             <img
               src={logo}
-              alt="logo"
+              alt='logo'
               style={{
                 width: '50px',
                 height: '50px',
@@ -24,14 +23,15 @@ export const Navbar = ({ toggleSidebar }) => {
             />
           </Link>
           <button
-            type="button"
+            type='button'
             className={styles.ToggleBtn}
-            onClick={toggleSidebar}>
+            onClick={toggleSidebar}
+          >
             <FaAlignRight></FaAlignRight>
           </button>
         </div>
-        <Links styleClass="navLinks"></Links>
+        <Links styleClass='navLinks'></Links>
       </div>
     </nav>
-  );
-};
+  )
+}

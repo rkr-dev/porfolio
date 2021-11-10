@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import cx from 'classnames';
-import { useStaticQuery, graphql } from 'gatsby';
-import { getSrc } from 'gatsby-plugin-image';
-import { Socials, Particlesbg, Quotes } from '../../components';
-import Typed from 'typed.js';
-import * as styles from './Hero.module.css';
+import React from 'react'
+import { Link } from 'gatsby'
+import cx from 'classnames'
+import { useStaticQuery, graphql } from 'gatsby'
+import { getSrc } from 'gatsby-plugin-image'
+import { Socials, Quotes } from '../../components'
+import Typed from 'typed.js'
+import * as styles from './Hero.module.css'
 
 export const query = graphql`
   {
@@ -19,28 +19,34 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 const options = {
   strings: ["I'm Rinil <span>Kunhiraman</span>"],
   typeSpeed: 200,
   showCursor: false,
-};
+}
 export const NameTyper = () => {
-  const el = React.useRef(null);
-  const typed = React.useRef(null);
+  const el = React.useRef(null)
+  const typed = React.useRef(null)
 
   React.useEffect(() => {
-    typed.current = new Typed(el.current, options);
+    typed.current = new Typed(el.current, options)
     return () => {
-      typed.current.destroy();
-    };
-  }, []);
-  return <div aria-label="Rinil Kunhiraman" className={styles.TypeWrap} ref={el}></div>;
-};
+      typed.current.destroy()
+    }
+  }, [])
+  return (
+    <div
+      aria-label='Rinil Kunhiraman'
+      className={styles.TypeWrap}
+      ref={el}
+    ></div>
+  )
+}
 
 export const Hero = () => {
-  const data = useStaticQuery(query);
-  const imageUrl = getSrc(data.file.edges[0].node);
+  const data = useStaticQuery(query)
+  const imageUrl = getSrc(data.file.edges[0].node)
 
   return (
     <header
@@ -48,14 +54,15 @@ export const Hero = () => {
       style={{
         background: `url(${imageUrl}) no-repeat center center/cover`,
         backgroundAttachment: `fixed`,
-      }}>
+      }}
+    >
       <div className={cx('sectionCenter', styles.HeroCenter)}>
         <article className={styles.HeroInfo}>
           <div>
             <div className={cx('underline', styles.HeroLeft)}></div>
             <NameTyper />
             <h3>Web Developer</h3>
-            <Link to="/about" className={cx('btn', styles.AbtBtn)}>
+            <Link to='/about' className={cx('btn', styles.AbtBtn)}>
               Learn More
             </Link>
           </div>
@@ -63,7 +70,6 @@ export const Hero = () => {
           <Quotes />
         </article>
       </div>
-      <Particlesbg />
     </header>
-  );
-};
+  )
+}

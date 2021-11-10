@@ -1,11 +1,12 @@
 .SocialLinks {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 15rem;
   display: flex;
   justify-content: space-between;
 }
 .SocialLink {
   font-size: 1.75rem;
+  background-color: transparent;
   color: hsl(209, 61%, 16%);
   transition: all 0.3s linear;
 }
@@ -14,10 +15,14 @@
   color: #e74c3c;
 }
 
-.SocialLink svg{
-  border: 1px solid #fff;
+.SocialLink svg {
   border-radius: 3px;
-  background-color: #fff;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+.SocialLink svg:hover {
+  box-shadow: 0px 0px 15px 5px rgba(231, 76, 60, 0.5);
+  transform: scale(1.02);
 }
 
 .Footer .SocialLink {

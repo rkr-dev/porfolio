@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
-  FaFacebookSquare,
+  FaFacebook,
   FaLinkedin,
-  FaInstagramSquare,
+  FaInstagram,
   FaStackOverflow,
-  FaTwitterSquare,
-} from 'react-icons/fa';
+  FaTwitter,
+} from 'react-icons/fa'
 
 export const links = [
   { id: 1, text: 'home', url: '/' },
@@ -13,37 +13,37 @@ export const links = [
   { id: 3, text: 'projects', url: '/projects' },
   { id: 4, text: 'blog', url: '/blog' },
   { id: 5, text: 'contact', url: '/contact' },
-];
+]
 
 export const socials = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="socialIcon"></FaFacebookSquare>,
+    icon: <FaFacebook className='socialIcon'></FaFacebook>,
     url: 'https://www.facebook.com/rinilkunhiramanfb',
-    name:'Facebook'
+    name: 'Facebook',
   },
   {
     id: 2,
-    icon: <FaLinkedin className="socialIcon"></FaLinkedin>,
+    icon: <FaLinkedin className='socialIcon'></FaLinkedin>,
     url: 'https://www.linkedin.com/in/reactjsdev/',
-    name:'LinkedIn'
+    name: 'LinkedIn',
   },
   {
     id: 3,
-    icon: <FaInstagramSquare className="socialIcon"></FaInstagramSquare>,
+    icon: <FaInstagram className='socialIcon'></FaInstagram>,
     url: 'https://www.instagram.com/rinilkunhiraman',
-    name:'Instagram'
+    name: 'Instagram',
   },
   {
     id: 4,
-    icon: <FaStackOverflow className="socialIcon"></FaStackOverflow>,
+    icon: <FaStackOverflow className='socialIcon'></FaStackOverflow>,
     url: 'https://stackoverflow.com/users/13587536/rkr-dev',
-    name:'StackOverflow'
+    name: 'StackOverflow',
   },
   {
     id: 5,
-    icon: <FaTwitterSquare className="socialIcon"></FaTwitterSquare>,
+    icon: <FaTwitter className='socialIcon'></FaTwitter>,
     url: 'https://www.twitter.com/rinilkunhiraman',
-    name:'Twitter'
+    name: 'Twitter',
   },
-];
+]
