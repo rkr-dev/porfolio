@@ -5,7 +5,7 @@
   width: 100%;
   height: 5rem;
   display: flex;
-  background: #fff;
+  background: transparent;
   align-items: center;
   z-index: 200;
   transition-timing-function: ease-in;
@@ -36,12 +36,6 @@
 }
 .ToggleBtn:hover {
   color: #6d7888;
-}
-
-@media screen and (min-width: 992px) {
-  .Navbar {
-    background: transparent;
-  }
 }
 
 @media screen and (min-width: 768px) {

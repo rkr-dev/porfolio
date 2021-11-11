@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Navbar, Sidebar, Footer } from '../../components';
-import * as styles from './Layout.module.css';
+import React, { useState } from 'react'
+import { Navbar, Sidebar, Footer } from '../../components'
+import * as styles from './Layout.module.css'
 
 export const Layout = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const toggleSidebar = () => {
-    setIsOpen((open) => !open);
-  };
+    setIsOpen((open) => !open)
+  }
 
   return (
     <div className={styles.Layout}>
@@ -15,5 +15,5 @@ export const Layout = ({ children }) => {
       {children}
       <Footer />
     </div>
-  );
-};
+  )
+}
