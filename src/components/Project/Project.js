@@ -14,10 +14,8 @@ export const Project = ({
   url,
   image,
 }) => {
-  const handleURL = (url) => {}
-
   return (
-    <Link to={`/projects/${id}`} activeClassName={styles.ProjectLink} key={id}>
+    <Link to={`/projects/${id}`} key={id}>
       <article className={styles.Project}>
         {image && (
           <GatsbyImage

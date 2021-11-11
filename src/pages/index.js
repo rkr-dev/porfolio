@@ -1,26 +1,26 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Layout, Seo, Hero, Projects, Jobs, Blogs } from '../components';
+import React from 'react'
+import { graphql } from 'gatsby'
+import { Layout, Seo, Hero, Projects, Jobs, Blogs } from '../components'
 
 const IndexPage = ({ data }) => {
-  let blogs = data.blogs.edges;
-  let projects = data.projects.edges;
+  let blogs = data.blogs.edges
+  let projects = data.projects.edges
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title='Home' />
       <Hero />
-      <Projects projects={projects} title="featured projects" showLink />
+      <Projects projects={projects} title='featured projects' showLink />
       <Jobs />
-      <Blogs blogs={blogs} title="latest Articles" showLink />
+      <Blogs blogs={blogs} title='latest Articles' showLink />
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   {
-    blogs: allStrapiBlogs(limit: 3, sort: {fields: date, order: DESC}) {
+    blogs: allStrapiBlogs(limit: 3, sort: { fields: date, order: DESC }) {
       edges {
         node {
           category
@@ -39,7 +39,11 @@ export const query = graphql`
         }
       }
     }
-    projects: allStrapiProjects(limit: 3,filter: {featured: {eq: true}} ) {
+    projects: allStrapiProjects(
+      limit: 3
+      filter: { featured: { eq: true } }
+      sort: { fields: updatedAt, order: DESC }
+    ) {
       edges {
         node {
           github
@@ -65,4 +69,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
